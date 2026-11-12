@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#f6f4ee" />
+  <meta name="description" content="A calmer way to make progress. Set an intention, focus on what matters, and celebrate the small wins." />
+  <title>Daylight — Make room for what matters</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <a class="brand" href="#" aria-label="Daylight home"><span class="brand-mark">✳</span><span>daylight</span></a>
+      <div class="side-label">WORKSPACE</div>
+      <nav class="nav-list" aria-label="Main navigation">
+        <a class="nav-item active" href="#today"><span>◷</span> Today <span class="nav-count">3</span></a>
+        <a class="nav-item" href="#tasks"><span>▤</span> My tasks</a>
+        <a class="nav-item" href="#focus"><span>◎</span> Focus room</a>
+      </nav>
+      <div class="side-label projects-label">YOUR SPACES <button class="add-space" aria-label="Add space">+</button></div>
+      <a class="space-item" href="#"><i class="space-dot lilac"></i> Studio refresh</a>
+      <a class="space-item" href="#"><i class="space-dot peach"></i> Personal</a>
+      <div class="sidebar-bottom">
+        <div class="week-card"><div class="week-top"><span>This week</span><span>↗</span></div><div class="week-score">4 <small>/ 5 days</small></div><div class="week-copy">You showed up for yourself.</div><div class="week-bars"><i></i><i></i><i></i><i></i><i class="empty"></i></div></div>
+        <div class="profile"><div class="avatar">M</div><div><strong>Milan R.</strong><small>Free plan</small></div><span class="more">···</span></div>
+      </div>
+    </aside>
+
+    <main class="main-content" id="today">
+      <header class="topbar"><div class="breadcrumb">My workspace <span>/</span> <b>Today</b></div><div class="top-actions"><button class="icon-button" aria-label="Notifications">♧<i class="notification-dot"></i></button><button class="help-button">Need a hand? <span>↗</span></button></div></header>
+      <section class="greeting"><div><div class="eyebrow"><span class="sun">☼</span> THURSDAY, NOVEMBER 13</div><h1>A little progress<br/>goes a <em>long way.</em></h1><p>Good morning, Milan. Let’s make today feel a little lighter.</p></div><div class="weather-card"><div class="weather-sun">☀</div><div><strong>18°</strong><small>Perfect day to begin</small></div><span class="weather-spark">✳</span></div></section>
+      <section class="intention-card"><div class="intention-icon">✦</div><div class="intention-copy"><span class="card-kicker">TODAY’S INTENTION</span><h2 id="intentionText">Make space for deep work.</h2></div><button class="edit-intention" id="editIntention">Edit intention <span>↗</span></button><div class="intention-orb"></div></section>
+      <div class="content-grid">
+        <section class="tasks-panel" id="tasks"><div class="section-heading"><div><span class="card-kicker">YOUR DAY, AT A GLANCE</span><h2>Today’s focus <span class="task-total" id="taskCount">2 / 4</span></h2></div><button class="text-button" id="addTask">＋ Add task</button></div><div class="task-list" id="taskList">
+          <label class="task-row done"><input type="checkbox" checked><span class="checkmark"></span><span class="task-text">Review the project moodboard<small><i class="tag work"></i> Studio refresh <b>·</b> 9:30 am</small></span><span class="task-priority">↗</span></label>
+          <label class="task-row"><input type="checkbox"><span class="checkmark"></span><span class="task-text">Send the first draft to Emma<small><i class="tag work"></i> Studio refresh <b>·</b> 11:00 am</small></span><span class="task-priority">↗</span></label>
+          <label class="task-row"><input type="checkbox"><span class="checkmark"></span><span class="task-text">Take a proper lunch break<small><i class="tag personal"></i> Personal <b>·</b> 12:30 pm</small></span><span class="task-priority low">↘</span></label>
+          <label class="task-row done"><input type="checkbox" checked><span class="checkmark"></span><span class="task-text">Water the little balcony plants<small><i class="tag personal"></i> Personal</small></span><span class="task-priority low">↘</span></label>
+        </div><div class="list-footer"><span>Little by little, a little becomes a lot.</span><span>— Tanzanian proverb</span></div></section>
+        <section class="focus-panel" id="focus"><div class="focus-head"><div><span class="card-kicker">A MOMENT FOR YOU</span><h2>Focus room</h2></div><button class="dots-button">···</button></div><p class="focus-desc">One thing at a time. You’ve got this.</p><div class="timer-wrap"><svg class="timer-ring" viewBox="0 0 200 200" aria-label="Focus timer"><circle class="ring-track" cx="100" cy="100" r="88"></circle><circle class="ring-progress" id="ringProgress" cx="100" cy="100" r="88"></circle></svg><div class="timer-center"><div class="timer-value" id="timerValue">25:00</div><div class="timer-label" id="timerLabel">READY WHEN YOU ARE</div></div></div><button class="start-button" id="startTimer"><span>▶</span> Start focusing</button><button class="skip-button" id="resetTimer">Reset timer</button><div class="focus-note"><span>✦</span> Take a breath. You’re right on time.</div></section>
+      </div>
+      <footer class="page-footer"><span>Made for slower, happier days.</span><span>Keep going gently <b>✳</b></span></footer>
+    </main>
+  </div>
+  <div class="toast" id="toast"></div>
+  <script src="script.js"></script>
+</body>
+</html>
